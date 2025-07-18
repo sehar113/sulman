@@ -1,7 +1,5 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
-
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
@@ -47,7 +45,7 @@ const Contact = () => {
     return regex.test(email);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setEmailError("");
     setNameError("");
@@ -65,36 +63,37 @@ const Contact = () => {
 
     setLoading(true);
 
-    emailjs
-      .send(
-        "service_r2i0by4",
-        "template_mf5x3bh",
-        {
-          from_name: form.name,
-          to_name: "Lohit Kolluri",
-          from_email: form.email,
-          to_email: "lohitkolluri@gmail.com",
-          message: form.message,
+    try {
+      const response = await fetch("https://formspree.io/f/xpwlwpew", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
         },
-        "p-gXzzyvEhPaJ0XA-"
-      )
-      .then(
-        () => {
-          setLoading(false);
-          setConfirmation("Thank you! I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        }
-      )
-      .catch((error) => {
-        setLoading(false);
-        console.error(error);
-        setConfirmation("Something went wrong. Please try again. :/");
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          _subject: "New contact form submission", // Optional subject for email notifications
+          // You can add any additional fields here
+        }),
       });
+
+      if (response.ok) {
+        setConfirmation("Thank you! I will get back to you as soon as possible.");
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error(error);
+      setConfirmation("Something went wrong. Please try again. :/");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

@@ -20,6 +20,7 @@ import {
   mathwork,
   CompileVortex,
   eduskill,
+  
 } from "../assets";
 
 export const navLinks = [
@@ -38,10 +39,16 @@ export const navLinks = [
 ];
 
 export const services = [
-  { title: "C", icon: c },
-  { title: "C++", icon: cpp },
-  { title: "Python", icon: python },
+  { title: "HTML", icon: c },
+
+  { title: "Css", icon: cpp },
+  { title: "React", icon: python },
   { title: "Java", icon: java },
+  { title: "Nodejs", icon: nodejs },
+
+  
+  
+  
 ];
 
 export const technologies = [
@@ -57,72 +64,78 @@ export const technologies = [
 
 export const experiences = [
   {
-    title: "AI/ML Intern",
-    company_name: "EduSkill Foundation | AWS Academy | AICTE",
+    title: "Frontend Development Intern",
+    company_name: "WebCraft Studios (Bahria Town, Rawalpindi)",
     icon: eduskill,
     iconBg: "#161329",
     date: "Sep 2023 - Nov 2023",
     points: [
-      "Acquired hands-on knowledge of AWS Cloud Foundation, delving into cloud infrastructure, services, and deployment.",
-      "also gaining a solid foundation in Machine Learning, covering topics like algorithms, data analysis, and model building.",
+       "Developed responsive web interfaces using React.js and Tailwind CSS",
+      "Implemented AWS cloud deployment for frontend applications",
+      "Optimized UI performance using Chrome DevTools and Lighthouse",
+      "Collaborated on team projects using Git version control"
     ],
   },
   {
-    title: "Mathwork Ai Virtual Intern",
-    company_name: "Mathwork | AICTE",
+    title: "Web Development Trainee",
+    company_name: "PixelForge Technologies (F-8, Islamabad)",
     icon: mathwork,
     iconBg: "#161329",
-    date: "May 2023 - Sep 2023",
+    date: "May 2024 - Sep 2024",
     points: [
-      "Completed virtual internship, gaining a strong foundation in MATLAB, including data analysis and processing.",
-      "Acquired practical skills in image and signal processing, including segmentation, batch processing, and spectral analysis.",
-      "Developed expertise in machine learning models for clustering, classification, and regression, and customized deep learning techniques for image classification.",
+      "Built interactive web components with JavaScript ES6+",
+      "Created mobile-first layouts using CSS Grid and Flexbox",
+      "Learned modern debugging techniques and browser compatibility fixes",
+      "Developed accessible UI components following WCAG guidelines"
     ],
   },
   {
-    title: "Artificial Intelligence Intern",
-    company_name: "Edunet Foundation | IBM SkillsBuild | AICTE",
-    icon: edunet,
-    iconBg: "#161329",
-    date: "June 2023 - July 2023",
-    points: [
-      "Engineered a comprehensive Mental Health Fitness Tracker ML model utilizing Python and scikit-learn.",
-      "Maximized the model's performance by refining model parameters and employing ensemble methods, yielding an outstanding accuracy percentage of 98.50%.",
-      "Leveraged 12 regression algorithms to attain precise outcomes in analyzing and predicting mental fitness levels across 150+ countries.",
+   title: "Creative Frontend Engineer",
+  company_name: "TechVista Innovations (Rawalpindi IT Park)",
+  icon: edunet,
+  iconBg: "#161329",
+  date: "Jan 2025 - Mar 2025",
+  points: [
+    "Crafted immersive interactive dashboards with particle.js animations and 3D CSS transforms",
+    "Designed a mental wellness portal featuring micro-interactions and emotion-driven color theming",
+    "Pioneered a 'digital zen garden' UI concept where user interactions grow visual elements",
+    "Built a real-time data playground with draggable SVG visualizations and canvas animations",
+    "Developed a 'focus mode' that adapts typography and layout based on user engagement metrics"
     ],
   },
 ];
 
 export const projects = [
   {
-    name: "WeatherPedia",
+    name: "service companies",
     description:
-      "Web-based platform that allows users to access weather information for their location by entering it in the search field",
+      "A web application that provides a platform for users to find and book services from various companies, including home repairs, cleaning, and personal services.",
     tags: [
       { name: "Javascript", color: "blue-text-gradient" },
       { name: "HTML", color: "green-text-gradient" },
-      { name: "bootstrap 5.3.0", color: "pink-text-gradient" },
-      { name: "Weather API by API Ninjas", color: "yellow-text-gradient" },
+      { name: "tailwindCSS", color: "pink-text-gradient" },
+      { name: "React", color: "pink-text-gradient"  },
     ],
     image: weatherpedia,
     source_code_link: "https://github.com/lohitkolluri/WeatherPedia",
   },
   {
-    name: "Terminal Like Portfolio Website",
+    name: "Mini Finance",
     description:
-      "A terminal themed portfolio website that allows users to type into the terminal and use commands like a real terminal.",
+      "A personal finance management application that helps users track their expenses, set budgets, and manage their finances effectively.",
     tags: [
       { name: "HTML", color: "blue-text-gradient" },
-      { name: "css", color: "green-text-gradient" },
+      { name: "tailwindCSS", color: "green-text-gradient" },
       { name: "Javascript", color: "pink-text-gradient" },
+      { name: "React", color: "pink-text-gradient" },
     ],
     image: termpw,
     source_code_link: "https://github.com/lohitkolluri/lohitkolluri.github.io",
   },
   {
-    name: "Mental Health Fitness Tracker",
+    name: "Crispy Kitchen",
     description:
-      "ML model that utilizes regression techniques to provide insights into mental health and make predictions based on the available data.",
+      "Crispy Kitchen is a restaurant website template with a light color theme. It consists of total 6 HTML pages with Bootstrap v5.2.3 CSS framework.",
     tags: [
       { name: "Machine Learning", color: "blue-text-gradient" },
       { name: "Jupyter Notebook", color: "green-text-gradient" },
@@ -133,11 +146,13 @@ export const projects = [
       "https://github.com/lohitkolluri/mental_health_fitness_tracker",
   },
   {
-    name: "PayloadMaster",
+    name: "College Management System",
     description:
-      "Tool to automate payload creation using the Metasploit framework",
+      "A web application to manage college operations including student enrollment, course management, and faculty assignments.",
     tags: [
-      { name: "shell", color: "blue-text-gradient" },
+      { name: "HTML", color: "blue-text-gradient" },
+      { name: "CSS", color: "blue-text-gradient" },
+      { name: "JS", color: "blue-text-gradient" },
     ],
     image: payloadmaster,
     source_code_link: "https://github.com/lohitkolluri/PayloadMaster",
@@ -155,12 +170,12 @@ export const projects = [
     source_code_link: "https://github.com/lohitkolluri/CompileVortex",
   },
   {
-    name: "Sketcher",
+    name: "Ecommerce Website",
     description:
-      "Convert an input image to a pencil sketch using OpenCV and Matplotlib libraries.",
+      "A fully functional e-commerce website built with React and Node.js, featuring product listings, shopping cart, and user authentication.",
     tags: [
-      { name: "OpenCV", color: "blue-text-gradient" },
-      { name: "Matplotlib", color: "green-text-gradient" },
+      { name: "React", color: "blue-text-gradient" },
+      { name: "TailwindCSS", color: "green-text-gradient" },
       { name: "Python", color: "pink-text-gradient" },
     ],
 
