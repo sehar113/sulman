@@ -48,12 +48,20 @@ const ComputersCanvas = () => {
       setIsMobile(event.matches);
     };
 
+    // Set the initial value
+    setIsMobile(mediaQuery.matches);
+
     mediaQuery.addEventListener("change", handleMediaQueryChange);
 
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
+
+  // Return null if it's a mobile device
+  if (isMobile) {
+    return null;
+  }
 
   return (
     <Canvas
